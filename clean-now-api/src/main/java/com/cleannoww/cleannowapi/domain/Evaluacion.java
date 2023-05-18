@@ -3,6 +3,7 @@ package com.cleannoww.cleannowapi.domain;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +11,7 @@ import lombok.Setter;
 @Table(name="Evaluaciones")
 @Getter
 @Setter
+@AllArgsConstructor
 public class Evaluacion {
     private static final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
     @Column(name="fecha")
@@ -27,4 +29,8 @@ public class Evaluacion {
     @ManyToOne
     @JoinColumn(name = "id_cliente",nullable = false)
     private Cliente cliente;
+
+    public Evaluacion() {
+        
+    }
 }
