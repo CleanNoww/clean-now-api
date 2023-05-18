@@ -33,6 +33,9 @@ public class Limpiador {
     private String descripcion;
     @Column(name="calificacion",nullable = false)
     private float calificacion;
+    @ManyToMany
+    @JoinColumn(name ="id_tipolimpieza",nullable = false)
+    private List<TipoLimpieza> tipoLimpieza;
     @OneToOne
     @JoinColumn(name ="id_agenda",nullable = false)
     private Agenda agenda;
