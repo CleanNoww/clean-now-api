@@ -13,7 +13,7 @@ public class EvaluacionServiceImpl implements EvaluacionService{
     }
 
     @Override
-    public Evaluacion create(Evaluacion evaluacion) {
+    public Evaluacion createEvaluacion(Evaluacion evaluacion) {
         return evaluacionRepository.save(evaluacion);
     }
 }
