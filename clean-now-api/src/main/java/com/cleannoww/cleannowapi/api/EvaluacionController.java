@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("api/v1/evaluaciones")
@@ -34,4 +35,10 @@ public class EvaluacionController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteEvaluacion(@PathVariable int id) {
+        evaluacionService.deleteEvaluacion(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
 }

@@ -1,5 +1,4 @@
 package com.cleannoww.cleannowapi.service;
-
 import com.cleannoww.cleannowapi.domain.Evaluacion;
 import com.cleannoww.cleannowapi.repository.EvaluacionRepository;
 import org.springframework.stereotype.Service;
@@ -47,7 +46,10 @@ public class EvaluacionServiceImpl implements EvaluacionService{
         Optional<Evaluacion> evaluacionOptional = evaluacionRepository.findById(id);
         return evaluacionOptional.orElse(null);
     }
-
+    @Override
+    public void deleteEvaluacion(int id) {
+        evaluacionRepository.deleteById(id);
+    }
 
     /*@Override
     public List<Evaluacion> getAllEvaluaciones() {
