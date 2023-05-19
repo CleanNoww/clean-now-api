@@ -11,9 +11,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Evaluacion {
-    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy ");
     @Column(name="fecha")
-    private Timestamp fecha;
+    private Timestamp fecha= new Timestamp(System.currentTimeMillis());
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id_evaluacion;
@@ -22,9 +22,9 @@ public class Evaluacion {
     @Column(name="comentario")
     private String comentario;
     @OneToOne
-    @JoinColumn(name = "id_reserva", nullable = false)
+    @JoinColumn(name = "id_reserva")
     private ReservaServicio reseServ;
     @ManyToOne
-    @JoinColumn(name = "id_cliente",nullable = false)
+    @JoinColumn(name = "id_cliente")
     private Cliente cliente;
 }

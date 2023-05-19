@@ -34,7 +34,11 @@ public class Limpiador {
     @Column(name="calificacion",nullable = false)
     private float calificacion;
     @ManyToMany
-    @JoinColumn(name ="id_tipolimpieza",nullable = false)
+    @JoinTable(
+            name = "limpiador_tipolimpieza",
+            joinColumns = @JoinColumn(name = "id_limpiador"),
+            inverseJoinColumns = @JoinColumn(name = "id_tipolimpieza")
+    )
     private List<TipoLimpieza> tipoLimpieza;
     @OneToOne
     @JoinColumn(name ="id_agenda",nullable = false)
