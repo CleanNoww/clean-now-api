@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 @Service
@@ -83,7 +84,7 @@ public class LimpiadorServiceImpl implements LimpiadorService {
             List<String> tiposLimpiezaLimpiador = limpiador.getTipoLimpieza().stream()
                     .map(TipoLimpieza::getNombre)
                     .toList();
-            if (tiposLimpiezaLimpiador.containsAll(tiposLimpieza)) {
+            if (new HashSet<>(tiposLimpiezaLimpiador).containsAll(tiposLimpieza)) {
                 resultado.add(limpiador);
             }
         }
