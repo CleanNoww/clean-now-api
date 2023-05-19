@@ -15,7 +15,8 @@ import org.hibernate.cache.spi.TimestampsRegion;
 public class Evaluacion {
     private static final SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy ");
     @Column(name="fecha")
-    private Timestamp fecha= new Timestamp(System.currentTimeMillis());    @Id
+    private Timestamp fecha= new Timestamp(System.currentTimeMillis());
+    @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id_evaluacion;
     @Column(name="calificacion")
