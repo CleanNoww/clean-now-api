@@ -1,5 +1,6 @@
 package com.cleannoww.cleannowapi.domain;
-
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,12 +24,13 @@ public class ReservaServicio {
     @Column(name="fechaServicio")
     private Date fechaServicio;
     @ManyToOne
-    @JoinColumn(name = "id_cliente",nullable = false)
+    @JoinColumn(name = "id_cliente")
     private Cliente cliente;
     @ManyToOne
-    @JoinColumn(name = "id_limpiador",nullable = false)
+    @JoinColumn(name = "id_limpiador")
     private Limpiador limpiador;
     @OneToOne
-    @JoinColumn(name = "id_servicio",nullable = false)
+    @JoinColumn(name = "id_servicio")
     private Servicio servicio;
+
 }

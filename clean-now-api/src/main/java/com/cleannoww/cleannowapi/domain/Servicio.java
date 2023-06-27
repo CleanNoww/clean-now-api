@@ -10,6 +10,7 @@ import java.sql.Timestamp;
 public class Servicio {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="id_servicio")
     private int id_servicio;
     @Column(name="inicio")
     private Timestamp inicio;

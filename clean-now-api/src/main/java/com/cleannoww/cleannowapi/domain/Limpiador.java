@@ -1,4 +1,6 @@
 package com.cleannoww.cleannowapi.domain;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,9 +38,8 @@ public class Limpiador {
     @ManyToMany
     @JoinColumn(name ="id_tipolimpieza",nullable = false)
     private List<TipoLimpieza> tipoLimpieza;
-    @OneToOne
-    @JoinColumn(name ="id_agenda",nullable = false)
-    private Agenda agenda;
     @OneToMany(mappedBy = "limpiador")
     private List<ReservaServicio> reservas;
+    @OneToMany(mappedBy = "limpiador")
+    private List<Evaluacion> evaluaciones;
 }

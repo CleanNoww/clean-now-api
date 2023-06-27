@@ -1,13 +1,18 @@
 package com.cleannoww.cleannowapi.domain;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import java.util.ArrayList;
 import java.util.List;
 @Entity
 @Table(name="Clientes")
 @Getter
 @Setter
+@NoArgsConstructor
 public class Cliente {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -29,4 +34,7 @@ public class Cliente {
     private List<ReservaServicio> historialReservas;
     @OneToMany(mappedBy = "cliente")
     private List<Evaluacion> historialEvaluaciones;
+
+
+
 }
