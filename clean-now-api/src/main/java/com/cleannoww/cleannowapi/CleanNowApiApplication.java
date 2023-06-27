@@ -1,5 +1,6 @@
 package com.cleannoww.cleannowapi;
 
+import com.cleannoww.cleannowapi.domain.Cliente;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,4 +11,5 @@ public class CleanNowApiApplication {
         SpringApplication.run(CleanNowApiApplication.class, args);
     }
 
+    Cliente c1= new Cliente();
 }

@@ -11,7 +11,7 @@ import lombok.Setter;
 public class TipoLimpieza {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name="id_tipolimpieza",nullable = false)
+    @Column(name="id_tipolimpieza")
     private int id_tipoLimpieza;
     @Column(name="nombre",nullable = false)
     private String nombre;

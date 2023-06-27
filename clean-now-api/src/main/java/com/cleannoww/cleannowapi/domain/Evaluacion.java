@@ -6,8 +6,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import com.cleannoww.cleannowapi.domain.Cliente;
 import org.hibernate.cache.spi.TimestampsRegion;
-
 @Entity
 @Table(name="Evaluaciones")
 @Getter
@@ -23,13 +23,11 @@ public class Evaluacion {
     private int calificacion;
     @Column(name="comentario")
     private String comentario;
-    @OneToOne
-    @JoinColumn(name = "id_reserva")
-    private ReservaServicio reseServ;
     @ManyToOne
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;
-    public Evaluacion() {
+    @ManyToOne
+    @JoinColumn(name = "id_limpiador")
+    private Limpiador limpiador;
 
-    }
 }
