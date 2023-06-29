@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { EvaluacionesCrearComponent } from './evaluaciones-crear/evaluaciones-crear.component';
 import { EvaluacionesModificarComponent } from './evaluaciones-modificar/evaluaciones-modificar.component';
 import { EvaluacionesEliminarComponent } from './evaluaciones-eliminar/evaluaciones-eliminar.component';
+import{EvaluacionesVisualizarComponent}from'./evaluaciones-visualizar/evaluaciones-visualizar.component'
 
 
 const routes: Routes = [
-  {path:'evaluaciones-crear',component:EvaluacionesCrearComponent},
+  {path:'',component:EvaluacionesCrearComponent},
+  {path:'evaluaciones-visualizar',component:EvaluacionesVisualizarComponent},
   {path:'evaluaciones-eliminar',component:EvaluacionesEliminarComponent},
-  {path:'',component:EvaluacionesModificarComponent},
+  {path:'evaluaciones-modificar',component:EvaluacionesModificarComponent},
 ];
 
 @NgModule({
