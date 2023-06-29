@@ -1,0 +1,14 @@
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.name{
+  color: rgb(38, 157, 161);
+  justify-content: center;
+}
+.menu{
+  color:rgb(38, 157, 161) ;
+}
+.nav-bar{
+  background-color: rgb(236, 236, 223);
+}
