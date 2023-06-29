@@ -1,5 +1,6 @@
 package com.cleannoww.cleannowapi.controller;
 import com.cleannoww.cleannowapi.domain.Limpiador;
+import com.cleannoww.cleannowapi.domain.LimpiadorSearchCriteria;
 import com.cleannoww.cleannowapi.service.LimpiadorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/limpiadores")
+@RequestMapping("/limpiadores2")
 public class LimpiadorController {
     private final LimpiadorService limpiadorService;
 
@@ -17,16 +18,7 @@ public class LimpiadorController {
     }
 
     @GetMapping
-    public List<Limpiador> buscarLimpiadores(@RequestParam(required = false) String nombre,
-                                             @RequestParam(required = false) Float calificacion,
-                                             @RequestParam(required = false) Integer numServicios,
-                                             @RequestParam(required = false) Integer edadMin,
-                                             @RequestParam(required = false) Integer edadMax,
-                                             @RequestParam(required = false) List<String> tiposLimpieza) {
-        if (nombre != null) {
-            return limpiadorService.buscarConFiltros(nombre, calificacion, numServicios, edadMin, edadMax, tiposLimpieza);
-        } else {
-            return limpiadorService.buscarConFiltros(null, calificacion, numServicios, edadMin, edadMax, tiposLimpieza);
-        }
+    public List<Limpiador> buscarLimpiadores(LimpiadorSearchCriteria criteria) {
+        return limpiadorService.buscarLimpiadores(criteria);
     }
 }
