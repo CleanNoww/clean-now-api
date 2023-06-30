@@ -1,7 +1,16 @@
-<div class="container">
-    <div class="row">
+<div class="container">    
+    <form class="example-form">
         <h1 class="nombre">Humberto Rodriguez</h1>
         <img class="foto" src="assets/oddy.jpeg" alt="oddylin">
-        
-    </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label class="texto">Comentario</mat-label>
+                <textarea matInput placeholder="Ejemplo: Me parece un servicio muy pauperrimo." ></textarea>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button color="">Publicar</button>
+        </div>          
+    </form>
 </div>
+

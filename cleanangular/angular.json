@@ -65,7 +65,7 @@
             },
             "development": {
               "browserTarget": "cleanangular:build:development"
-            }
+           } 
           },
           "defaultConfiguration": "development"
         },
