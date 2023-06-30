@@ -1,0 +1,39 @@
+.container{ 
+    text-align: center;
+    height: 300px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    min-height: 51.5vh;
+}
+.foto{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding-bottom: 40px;
+}
+.nombre{
+    color: rgb(38, 157, 161);
+    justify-content: center;
+    font-size:xx-large;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+   
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  :host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .texto{
+    color: rgb(38, 157, 161);
+  }
+  .Calificacion{
+    color: rgb(38, 157, 161);
+  }
