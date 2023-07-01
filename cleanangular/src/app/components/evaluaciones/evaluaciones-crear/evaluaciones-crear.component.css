@@ -1,39 +1,53 @@
-.container{ 
-    text-align: center;
-    height: 300px;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    min-height: 51.5vh;
-}
 .foto{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    padding-bottom: 40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding-bottom: 40px;
 }
 .nombre{
-    color: rgb(38, 157, 161);
-    justify-content: center;
-    font-size:xx-large;
+  color: rgb(38, 157, 161);
+  justify-content: center;
+  font-size:xx-large;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-   
-  }
-  .example-full-width {
-    width: 100%;
-  }
-  :host {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .texto{
-    color: rgb(38, 157, 161);
-  }
-  .Calificacion{
-    color: rgb(38, 157, 161);
-  }
+  width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+}
+.Calificacion{
+  color: rgb(38, 157, 161);
+}
+.nombre {
+  text-align: center;
+}
+.foto {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  border-radius: 50%;
+}
+.Comentario{
+  color:rgb(38, 157, 161);
+}
+.detalles{
+  color:rgba(38, 157, 161, 0.705);
+}
+.texto {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.example-full-width{
+  width: 100%;
+
+}
+.mat-form-field textarea {
+  overflow-y: auto;
+}
+.mat-form-field.mat-focused .mat-form-field-wrapper {
+  box-shadow: none;
+}
