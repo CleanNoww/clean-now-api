@@ -28,7 +28,7 @@ public class Cliente {
     private String contraseña;
     @Column(name="tipoRegistro")
     private String tipoRegistro;
-    @Column(name="direccion",nullable = false)
+    @Column(name="direccion")
     private String direccion;
     @OneToMany(mappedBy = "cliente")
     private List<ReservaServicio> historialReservas;
