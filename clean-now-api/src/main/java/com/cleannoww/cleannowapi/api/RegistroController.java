@@ -18,4 +18,8 @@ public class RegistroController {
     public ResponseEntity<Cliente> registrarCliente(@RequestBody Cliente cliente) {
         return new ResponseEntity<Cliente>(registroService.registrarCliente(cliente),HttpStatus.CREATED);
     }
+    @PutMapping("/{idCliente}")
+    public Cliente actualizarCliente(@PathVariable int idCliente, @RequestBody Cliente cliente) {
+        return registroService.actualizarCliente(idCliente, cliente);
+    }
 }
