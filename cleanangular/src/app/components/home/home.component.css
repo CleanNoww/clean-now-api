@@ -1,0 +1,80 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo-image {
+  width: 900px;
+  height: auto;
+  max-width: 100%;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgb(38, 157, 161);
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 40px;
+  color: rgb(38, 157, 161);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.register-limp-button,
+.register-clien-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: rgb(54, 218, 177);
+  color: rgb(236, 236, 223);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.register-clien-button {
+  background-color: rgb(54, 218, 177);
+}
+
+.register-limp-button:hover,
+.register-clien-button:hover {
+  background-color: rgb(38, 157, 161);
+}
+
+@media screen and (max-width: 768px) {
+  .home-container {
+    padding: 20px;
+  }
+  
+  .logo-image {
+    width: 500px;
+  }
+}
+.register-text{
+  padding-top: 20px;
+  color: rgb(38, 157, 161);
+}
+a{
+  color: rgb(38, 157, 161);
+}

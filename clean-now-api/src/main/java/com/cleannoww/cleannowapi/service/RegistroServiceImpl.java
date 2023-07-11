@@ -31,8 +31,8 @@ public class RegistroServiceImpl implements RegistroService {
         if(cliente.getDireccion()!=null){
             clienteExistente.setDireccion(cliente.getDireccion());
         }
-        if(cliente.getContraseña()!=null){
-            clienteExistente.setContraseña(cliente.getContraseña());
+        if(cliente.getPassword()!=null){
+            clienteExistente.setPassword(cliente.getPassword());
         }
         return registroRepository.save(clienteExistente);
     }
