@@ -24,8 +24,8 @@ public class Cliente {
     private String nombre_completo;
     @Column(name="email")
     private String email;
-    @Column(name="contraseña")
-    private String contraseña;
+    @Column(name="password")
+    private String password;
     @Column(name="tipoRegistro")
     private String tipoRegistro;
     @Column(name="direccion")
@@ -34,7 +34,5 @@ public class Cliente {
     private List<ReservaServicio> historialReservas;
     @OneToMany(mappedBy = "cliente")
     private List<Evaluacion> historialEvaluaciones;
-
-
 
 }

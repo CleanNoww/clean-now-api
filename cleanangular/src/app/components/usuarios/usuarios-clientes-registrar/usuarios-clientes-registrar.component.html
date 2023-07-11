@@ -1,0 +1,45 @@
+<div class="container">
+  <mat-card class="form-container">
+    <h2>Registro de cliente</h2>
+    <form (ngSubmit)="registrarCliente()" #registroForm="ngForm">
+      <div class="example-container">
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre Completo</mat-label>
+          <input matInput name="nombre" [(ngModel)]="cliente.nombre_completo" required>
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <mat-form-field class="example-full-width">
+          <mat-label>DNI</mat-label>
+          <input matInput name="dni" type="number" [(ngModel)]="cliente.dni" required>
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <mat-form-field class="example-full-width">
+          <mat-label>Ingresa tu email</mat-label>
+          <input matInput name="email" placeholder="correo@ejemplo.com" [formControl]="email" [(ngModel)]="cliente.email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <mat-form-field class="example-full-width">
+          <mat-label>Ingresa tu contraseña</mat-label>
+          <input matInput name="password" [type]="hide ? 'password' : 'text'" [(ngModel)]="cliente.password" required>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <div class="example-container">
+        <mat-form-field class="example-full-width">
+          <mat-label>Dirección</mat-label>
+          <textarea matInput name="direccion" placeholder="Ejemplo Calle Ejemplo #476" [(ngModel)]="cliente.direccion" required></textarea>
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="" class="submit-button">Registrar</button>
+    </form>
+    <div *ngIf="registroExitoso" class="message">
+      Registro exitoso. Serás redirigido al inicio.
+    </div>
+  </mat-card>
+</div>

@@ -6,7 +6,7 @@ export interface Cliente{
     dni:number;
     nombre_completo:String;
     email:String;
-    contraseña:String;
+    password:String;
     tipoRegistro:String;
     direccion:String;
     historialReservas:ReservaServicio[];

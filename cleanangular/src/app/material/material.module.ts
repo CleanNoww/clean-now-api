@@ -26,6 +26,8 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule, 
     MatDividerModule,
     MatCardModule,
+    
+
   ],
   exports:[
     MatIconModule,
@@ -39,6 +41,7 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule, 
     MatDividerModule,
     MatCardModule,
+  
   ]
 })
 

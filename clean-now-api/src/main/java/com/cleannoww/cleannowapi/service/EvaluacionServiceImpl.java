@@ -16,6 +16,7 @@ public class EvaluacionServiceImpl implements EvaluacionService{
 
     @Override
     public Evaluacion createEvaluacion(Evaluacion evaluacion) {
+
         return evaluacionRepository.save(evaluacion);
     }
 
@@ -26,15 +27,12 @@ public class EvaluacionServiceImpl implements EvaluacionService{
 
     @Override
     public Evaluacion updateEvaluacion(Evaluacion evaluacion) {
-        // Buscar la evaluación en la base de datos por su id_evaluacion
         Evaluacion evaluacionExistente = evaluacionRepository.findById(evaluacion.getId_evaluacion()).orElse(null);
 
         if (evaluacionExistente != null) {
-            // Actualizar los campos necesarios de la evaluación existente
             evaluacionExistente.setCalificacion(evaluacion.getCalificacion());
             evaluacionExistente.setComentario(evaluacion.getComentario());
 
-            // Guardar la evaluación actualizada en la base de datos
             return evaluacionRepository.save(evaluacionExistente);
         }
 
