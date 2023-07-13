@@ -44,10 +44,6 @@ public class Limpiador {
     )
     private List<TipoLimpieza> tipoLimpieza;
     @JsonIgnore
-    @OneToOne
-    @JoinColumn(name ="id_agenda",nullable = false)
-    private Agenda agenda;
-    @JsonIgnore
     @OneToMany(mappedBy = "limpiador")
     private List<ReservaServicio> reservas;
 }
