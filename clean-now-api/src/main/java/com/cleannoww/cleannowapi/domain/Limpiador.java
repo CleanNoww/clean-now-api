@@ -1,4 +1,5 @@
 package com.cleannoww.cleannowapi.domain;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,8 +22,10 @@ public class Limpiador {
     private String nombre_completo;
     @Column(name="email")
     private String email;
+    @JsonIgnore
     @Column(name="contraseña")
     private String contraseña;
+    @JsonIgnore
     @Column(name="tipoRegistro")
     private String tipoRegistro;
     @Column(name="num_servicios")
@@ -40,9 +43,11 @@ public class Limpiador {
             inverseJoinColumns = @JoinColumn(name = "id_tipolimpieza")
     )
     private List<TipoLimpieza> tipoLimpieza;
+    @JsonIgnore
     @OneToOne
     @JoinColumn(name ="id_agenda",nullable = false)
     private Agenda agenda;
+    @JsonIgnore
     @OneToMany(mappedBy = "limpiador")
     private List<ReservaServicio> reservas;
 }
