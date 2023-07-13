@@ -36,7 +36,10 @@
           <textarea matInput name="direccion" placeholder="Ejemplo Calle Ejemplo #476" [(ngModel)]="cliente.direccion" required></textarea>
         </mat-form-field>
       </div>
-      <button mat-raised-button color="" class="submit-button">Registrar</button>
+      <div class="button-container">
+        <button mat-raised-button color="" class="submit-button">Registrar</button>
+        <button mat-raised-button color="" class="back-button" routerLink="/home">Regresar</button>
+      </div>
     </form>
     <div *ngIf="registroExitoso" class="message">
       Registro exitoso. Serás redirigido al inicio.

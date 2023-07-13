@@ -36,4 +36,8 @@ public class RegistroServiceImpl implements RegistroService {
         }
         return registroRepository.save(clienteExistente);
     }
+    @Override
+    public Cliente obtenerCliente(int idCliente) {
+        return registroRepository.findById(idCliente).orElse(null);
+    }
 }

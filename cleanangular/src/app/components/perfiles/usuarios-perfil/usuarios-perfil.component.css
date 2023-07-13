@@ -1,126 +1,96 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px); /* Resta la altura del navbar y el footer */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.main-card {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgb(236, 236, 223);
+  border-radius: 8px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.card {
+  flex-basis: calc(50% - 10px); /* Ajusta el ancho de las cards dentro de la fila */
+  background-color: rgb(236, 236, 223);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.nombre {
+  color: rgb(38, 157, 161);
+  text-align: center;
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+
 .foto {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    padding-bottom: 40px;
-  }
-  .foto{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    padding-bottom: 40px;
-  }
-  .nombre{
-    color: rgb(38, 157, 161);
-    justify-content: center;
-    font-size:xx-large;
-  }
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .card{
-    background-color: rgb(236, 236, 223);
-  }
-  
-  .example-form {
-    width: 600px;
-    padding: 20px;
-    background-color: rgb(236, 236, 223);
-    border-radius: 8px;
-  }
-  
-  .nombre {
-    text-align: center;
-  }
-  
-  .foto {
-    display: block;
-    margin: 20px auto;
-    width: 200px;
-    border-radius: 50%;
-  }
-  
-  .Descripcion{
-    color:rgb(38, 157, 161);
-    background-color: rgb(236, 236, 223);
-  }
-  
-  .Calificacion{
-    color:rgb(38, 157, 161);
-    background-color: rgb(236, 236, 223);
-  }
-  
-  .mat-form-field {
-    width: 100%;
-    background-color: rgb(236, 236, 223);
-  }
-  
-  .detalles{
-    color:rgba(38, 157, 161, 0.705);
-  }
-  
-  .texto {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .example-full-width{
-    width: 100%;
-  }
-  
-  .mat-form-field textarea {
-    overflow-y: auto;
-  }
-  
-  .mat-form-field.mat-focused .mat-form-field-wrapper {
-    box-shadow: none;
-  }
-  
-  .comentario-card {
-    margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.mat-form-field {
+  width: 100%;
+  background-color: rgb(236, 236, 223);
+}
+
+.detalles {
+  color: rgba(38, 157, 161, 0.705);
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.mat-form-field textarea {
+  overflow-y: auto;
+}
+
+.mat-form-field.mat-focused .mat-form-field-wrapper {
+  box-shadow: none;
+}
+
+/* Asegurar que el contenido no traspase el navbar y el footer */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .main-card {
     padding: 10px;
-    background-color: rgb(236, 236, 223);
   }
   
-  .autor {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+  .card {
+    flex-basis: 100%;
   }
-  
-  .autor-imagen {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  
-  .comentario-contenido {
-    margin: 0;
-  }
-  .calificacion {
-    margin-left: auto;
-  }
-  .nombre {
-    text-align: center;
-  }
-  .autor {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .autor-info {
-    display: flex;
-    align-items: center;
-  }
-  
-  .autor-nombre {
-    font-weight: bold;
-    margin-left: 10px;
-  }
-  
+}
+.toggle-button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
