@@ -34,5 +34,4 @@ public class Cliente {
     private List<ReservaServicio> historialReservas;
     @OneToMany(mappedBy = "cliente")
     private List<Evaluacion> historialEvaluaciones;
-
 }

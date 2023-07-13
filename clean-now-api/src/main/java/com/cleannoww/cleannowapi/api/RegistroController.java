@@ -22,4 +22,13 @@ public class RegistroController {
     public Cliente actualizarCliente(@PathVariable int idCliente, @RequestBody Cliente cliente) {
         return registroService.actualizarCliente(idCliente, cliente);
     }
+    @GetMapping("/{idCliente}")
+    public ResponseEntity<Cliente> obtenerCliente(@PathVariable int idCliente) {
+        Cliente cliente = registroService.obtenerCliente(idCliente);
+        if (cliente != null) {
+            return ResponseEntity.ok(cliente);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }

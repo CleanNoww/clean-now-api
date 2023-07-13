@@ -6,10 +6,13 @@
 }
 
 .form-container {
-  width: 80%; 
+  width: 80%;
   margin: 0 auto;
   padding: 20px;
-  max-width: 500px; 
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-container h2 {
@@ -61,4 +64,15 @@ textarea {
 .message {
   color: #333;
   margin-top: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Alinea los botones a los extremos */
+  margin-top: 20px; /* Ajusta el margen superior entre los botones y el contenido superior */
+}
+
+.submit-button,
+.back-button {
+  width: 48%; /* Ajusta el ancho de los botones para que sean responsivos */
 }
