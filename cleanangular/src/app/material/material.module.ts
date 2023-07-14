@@ -10,6 +10,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [],
@@ -26,11 +27,12 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule, 
     MatDividerModule,
     MatCardModule,
-    
+    MatMenuModule,
 
   ],
   exports:[
     MatIconModule,
+
     MatButtonModule,
     MatToolbarModule,
     FormsModule,
@@ -41,7 +43,7 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule, 
     MatDividerModule,
     MatCardModule,
-  
+    MatMenuModule,
   ]
 })
 

@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .example-form {
+    width: 100%;
+  }
+  
+  .historial-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(236, 236, 223);
+  }
+  
+  .nombre {
+    text-align: center;
+    color: rgb(38, 157, 161);
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .evaluacion-card {
+    background-color: rgb(236, 236, 223);
+    padding: 10px;
+  }
+
+  .autor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+  
+  .autor-imagen {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .comentario-contenido {
+    margin: 0;
+  }
+  
+  .comentario-opciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .comentario-opciones button {
+    margin-left: 10px;
+  }
+  .autor-info {
+    flex: 1;
+    margin-right: 10px;
+  }

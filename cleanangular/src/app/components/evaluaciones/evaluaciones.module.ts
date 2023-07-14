@@ -10,17 +10,20 @@ import { EvaluacionesVisualizarComponent } from './evaluaciones-visualizar/evalu
 
 
 
+
 @NgModule({
   declarations: [
     EvaluacionesCrearComponent,
     EvaluacionesModificarComponent,
     EvaluacionesEliminarComponent,
-    EvaluacionesVisualizarComponent
+    EvaluacionesVisualizarComponent,
+    
   ],
   imports: [
     CommonModule,
     EvaluacionesRoutingModule,
     MaterialModule,
+
   ]
 })
 export class EvaluacionesModule { }

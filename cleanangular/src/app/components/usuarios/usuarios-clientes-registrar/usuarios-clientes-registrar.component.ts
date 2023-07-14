@@ -29,17 +29,7 @@ export class UsuariosClientesRegistrarComponent {
         response => {
           console.log('Cliente registrado:', response);
           this.registroExitoso = true;
-          this.cliente = { // Vaciar los campos del cliente
-            id_cliente: 0,
-            dni: 99999999,
-            nombre_completo: '',
-            email: '',
-            password: '',
-            tipoRegistro: 'correo electronico',
-            direccion: '',
-            historialReservas: [],
-            historialEvaluaciones: []
-          };
+
           setTimeout(() => {
             this.router.navigate(['/home']); // Redirigir al inicio después de 5 segundos
           }, 5000);

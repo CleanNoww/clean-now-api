@@ -2,4 +2,8 @@
 .content{
     margin: 0;
     background-color: rgb(236, 236, 223);
+    min-height: calc(100% - 80px); 
     }
+.app-container{
+    height: 100%;
+}

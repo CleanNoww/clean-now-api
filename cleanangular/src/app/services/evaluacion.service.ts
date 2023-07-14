@@ -17,4 +17,8 @@ export class EvaluacionService {
   public obtenerEvaluaciones(): Observable<Evaluacion[]> {
     return this.http.get<Evaluacion[]>(`${this.apiUrl}/evaluaciones`);
   }
+  eliminarEvaluacion(idEvaluacion: number): Observable<void> {
+    const url = `${this.apiUrl}/evaluaciones/${idEvaluacion}`;
+    return this.http.delete<void>(url);
+  }
 }

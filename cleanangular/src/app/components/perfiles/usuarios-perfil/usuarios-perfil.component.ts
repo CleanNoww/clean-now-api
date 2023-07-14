@@ -27,7 +27,7 @@ export class UsuariosPerfilComponent implements OnInit {
   }
 
   obtenerCliente(): void {
-    const idCliente = 7;
+    const idCliente = 18;
     this.perfilService.obtenerCliente(idCliente)
       .subscribe(
         cliente => this.cliente = cliente,

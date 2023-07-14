@@ -7,9 +7,9 @@ import {EvaluacionesVisualizarComponent}from'./evaluaciones-visualizar/evaluacio
 
 
 const routes: Routes = [
-  {path:'',component:EvaluacionesCrearComponent},
+  {path:'evaluaciones-crear',component:EvaluacionesCrearComponent},
   {path:'evaluaciones-visualizar',component:EvaluacionesVisualizarComponent},
-  {path:'evaluaciones-eliminar',component:EvaluacionesEliminarComponent},
+  {path:'',component:EvaluacionesEliminarComponent},
   {path:'evaluaciones-modificar',component:EvaluacionesModificarComponent},
 ];
 

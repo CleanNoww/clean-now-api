@@ -1,1 +1,45 @@
-<p>evaluaciones-eliminar works!</p>
+<div class="container">    
+    <form class="example-form">
+      <mat-card class="historial-card">
+        <mat-card-header>
+          <mat-card-title class="nombre">Historial evaluaciones</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div *ngFor="let evaluacion of evaluaciones" class="card">
+            <mat-card class="evaluacion-card">
+              <div class="comentario">
+                <div class="autor">
+                  <img class="autor-imagen" src="assets/chus.jpeg" alt="cliente-imagen">
+                  <div class="autor-info">
+                    <strong>Andres Zuckerberg Pitt</strong>
+                  </div>
+                  <div class="calificacion">
+                    <strong>Calificacion:</strong> {{ evaluacion.calificacion }}
+                  </div>
+                </div>
+                <div class="comentario-info">
+                    <div class="comentario-opciones">
+                        <p class="comentario-contenido">{{ evaluacion.comentario }}</p>
+                        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                          <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                          <button mat-menu-item (click)="openDialog('enterAnimationDuration', 'exitAnimationDuration', 1)">
+                            <mat-icon>clear</mat-icon>
+                            <span>Eliminar</span>
+                          </button>
+                          <button mat-menu-item (click)="modificarEvaluacion(1)">
+                            <mat-icon>settings</mat-icon>
+                            <span>Modificar</span>
+                          </button>
+                        </mat-menu>
+                      </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </form>
+  </div>
+  
