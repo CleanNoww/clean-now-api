@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EvaluacionService } from 'src/app/services/evaluacion.service';
 import { Evaluacion } from 'src/app/model/evaluacion';
 import { MatDialog } from '@angular/material/dialog';
-
+import { Router } from '@angular/router';
 import { EvaluacionesDialogComponent } from '../evaluaciones-dialog/evaluaciones-dialog.component';
 
 @Component({
@@ -13,7 +13,7 @@ import { EvaluacionesDialogComponent } from '../evaluaciones-dialog/evaluaciones
 export class EvaluacionesEliminarComponent implements OnInit {
   evaluaciones: Evaluacion[] = [];
 
-  constructor(private evaluacionService: EvaluacionService, private dialog: MatDialog) {}
+  constructor(private evaluacionService: EvaluacionService, private dialog: MatDialog, private router: Router) {}
 
   ngOnInit(): void {
     this.obtenerEvaluaciones();
@@ -57,8 +57,8 @@ export class EvaluacionesEliminarComponent implements OnInit {
       }
     );
   }
-  
-  modificarEvaluacion(idEvaluacion: number): void {
-    // Implementar la lógica para abrir un diálogo o redirigir a una página para modificar la evaluación
+  navigateToModificarEvaluacion(): void {
+    this.router.navigate(['/evaluaciones/evaluaciones-modificar']);
   }
+
 }

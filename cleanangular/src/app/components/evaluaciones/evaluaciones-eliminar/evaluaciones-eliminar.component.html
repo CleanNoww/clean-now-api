@@ -24,11 +24,11 @@
                           <mat-icon>more_vert</mat-icon>
                         </button>
                         <mat-menu #menu="matMenu">
-                          <button mat-menu-item (click)="openDialog('enterAnimationDuration', 'exitAnimationDuration', 1)">
+                          <button mat-menu-item (click)="openDialog('enterAnimationDuration', 'exitAnimationDuration', 5)">
                             <mat-icon>clear</mat-icon>
                             <span>Eliminar</span>
                           </button>
-                          <button mat-menu-item (click)="modificarEvaluacion(1)">
+                          <button mat-menu-item (click)="navigateToModificarEvaluacion()">
                             <mat-icon>settings</mat-icon>
                             <span>Modificar</span>
                           </button>

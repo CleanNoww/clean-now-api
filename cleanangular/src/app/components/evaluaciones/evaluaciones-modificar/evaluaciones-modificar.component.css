@@ -1,0 +1,54 @@
+.foto{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    padding-bottom: 40px;
+  }
+  .nombre{
+    color: rgb(38, 157, 161);
+    justify-content: center;
+    font-size:xx-large;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .example-form {
+    width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .Calificacion{
+    color: rgb(38, 157, 161);
+  }
+  .nombre {
+    text-align: center;
+  }
+  .foto {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    border-radius: 50%;
+  }
+  .Comentario{
+    color:rgb(38, 157, 161);
+  }
+  .detalles{
+    color:rgba(38, 157, 161, 0.705);
+  }
+  .texto {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .example-full-width{
+    width: 100%;
+  
+  }
+  .mat-form-field textarea {
+    overflow-y: auto;
+  }
+  .mat-form-field.mat-focused .mat-form-field-wrapper {
+    box-shadow: none;
+  }
+  

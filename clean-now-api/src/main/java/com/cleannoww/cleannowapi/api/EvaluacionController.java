@@ -40,5 +40,13 @@ public class EvaluacionController {
         evaluacionService.deleteEvaluacion(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-
+    @GetMapping("/{id}")
+    public ResponseEntity<Evaluacion> obtenerEvaluacionPorId(@PathVariable int id) {
+        Evaluacion evaluacion = evaluacionService.obtenerEvaluacionPorId(id);
+        if (evaluacion != null) {
+            return ResponseEntity.ok(evaluacion);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }

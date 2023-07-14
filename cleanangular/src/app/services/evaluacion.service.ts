@@ -21,4 +21,8 @@ export class EvaluacionService {
     const url = `${this.apiUrl}/evaluaciones/${idEvaluacion}`;
     return this.http.delete<void>(url);
   }
+  actualizarEvaluacion(id: number, evaluacion: Evaluacion): Observable<Evaluacion> {
+    const url = `${this.apiUrl}/evaluaciones/${id}`;
+    return this.http.put<Evaluacion>(url, evaluacion);
+  }
 }
