@@ -1,0 +1,33 @@
+.nav-bar {
+    background-color: rgb(236, 236, 223);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .name {
+    color: rgb(38, 157, 161);
+  }
+  
+  .menu {
+    color: rgb(38, 157, 161);
+  }
+  
+  .home {
+    color: rgb(38, 157, 161);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .name {
+      font-size: 14px;
+    }
+  
+    .menu,
+    .home {
+      font-size: 20px;
+    }
+  }

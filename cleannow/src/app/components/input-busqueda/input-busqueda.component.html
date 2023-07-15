@@ -1,0 +1,7 @@
+<mat-form-field class="busqueda-form-field">
+    <mat-label>Buscar limpiador</mat-label>
+    <input matInput type="text" [(ngModel)]="nombreLimpiador">
+    <button *ngIf="nombreLimpiador" matSuffix mat-icon-button aria-label="Clear" (click)="limpiarNombreLimpiador()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>

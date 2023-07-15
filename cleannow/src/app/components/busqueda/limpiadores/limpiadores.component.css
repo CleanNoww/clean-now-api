@@ -1,0 +1,17 @@
+.Titulo {
+    padding-top: 50px;
+    font-size: 70px;
+    padding-bottom: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(21, 189, 255);
+}
+.search {
+    text-align: center;
+}
+
+  .container-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
